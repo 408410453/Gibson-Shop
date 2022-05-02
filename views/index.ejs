@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Gibson Shop</title>
+</head>
+
+<body>
+    <!--TOPBAR-->
+        <div class="nav">
+            <ul class="nav_list">
+                <!-- logo-->
+                <li class="nav_listlogo">
+                    <a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"  fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+                        <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+                      </svg>
+                    </a>
+                </li>
+                <!--search-->
+                
+                <li class="nav_listsearch">
+                    <svg class="nav_listsearch_icon" viewBox="0 0 512 512" width="80" title="search">
+                        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg>
+                    <input type="text" class="nav_listsearch_input" name="search_input"autofocus placeholder="請輸入商品內容">
+                    <button id="myBtn" onclick="getnumber()"></button>
+                    <svg class="nav_listsearch_close" viewBox="0 0 352 512" width="100" title="times">
+                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                    </svg>
+                    <svg class="nav_listsearch_delete" viewBox="0 0 640 512" width="100" title="backspace">
+                        <path d="M576 64H205.26A63.97 63.97 0 0 0 160 82.75L9.37 233.37c-12.5 12.5-12.5 32.76 0 45.25L160 429.25c12 12 28.28 18.75 45.25 18.75H576c35.35 0 64-28.65 64-64V128c0-35.35-28.65-64-64-64zm-84.69 254.06c6.25 6.25 6.25 16.38 0 22.63l-22.62 22.62c-6.25 6.25-16.38 6.25-22.63 0L384 301.25l-62.06 62.06c-6.25 6.25-16.38 6.25-22.63 0l-22.62-22.62c-6.25-6.25-6.25-16.38 0-22.63L338.75 256l-62.06-62.06c-6.25-6.25-6.25-16.38 0-22.63l22.62-22.62c6.25-6.25 16.38-6.25 22.63 0L384 210.75l62.06-62.06c6.25-6.25 16.38-6.25 22.63 0l22.62 22.62c6.25 6.25 6.25 16.38 0 22.63L429.25 256l62.06 62.06z" />
+                    </svg>
+                </li>
+                <!--item-->
+                <li class="nav_listitem">Login
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fingerprint" viewBox="0 0 16 16">
+                        <path d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"/>
+                        <path d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z"/>
+                        <path d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"/>
+                        <path d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z"/>
+                        <path d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z"/>
+                      </svg>
+                    <ul class="nav_listitemdrop">
+                        <li>Sing in</li>
+                        <li>Sign out</li>
+                        <li>Register</li>
+                    </ul>
+                </li>
+                <li class="nav_listitem">Item
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                    <ul class="nav_listitemdrop">
+                        <li>Clothing</li>
+                        <li>Pants</li>
+                        <li>Shoes</li>
+                        <li>socks</li>
+                    </ul>
+                </li>
+                <li class="nav_listitem">Order
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-piggy-bank-fill" viewBox="0 0 16 16">
+                        <path d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595Zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199Zm-8.999-.65a.5.5 0 1 1-.276-.96A7.613 7.613 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.602 6.602 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
+                      </svg>
+                </li>
+                <li class="nav_listitem">Shopping cart
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                </li>
+            </ul>
+        </div>
+        
+    <!--commodity-->
+        <div class="content">
+            <div class="content_list">   
+                <div class="content_list_sale">On Sale!</div>
+                <img class="content_list_img" src="/images/hat.webp" alt="hat">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">Hat</div>
+                    <div class="content_list_body_intro">this is hat</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+            <div class="content_list">
+                <div class="content_list_sale">On Sale!</div>
+                <img class="content_list_img" src="/images/T-shirt.jpg" alt="T-shirt">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">T-shirt</div>
+                    <div class="content_list_body_intro">this is T-Shirt</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+            <div class="content_list">
+                <img class="content_list_img" src="/images/Pants.jpg" alt="Pants">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">Pants</div>
+                    <div class="content_list_body_intro">this is Pants</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+            <div class="content_list">
+                <div class="content_list_sale">On Sale!</div>
+                <img class="content_list_img" src="/images/Shoes.jpeg" alt="Shoes">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">Shoes</div>
+                    <div class="content_list_body_intro">this is Shoes</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+            <div class="content_list">
+                <div class="content_list_sale">On Sale!</div>
+                <img class="content_list_img" src="/images/Socks.jpg" alt="Socks">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">Socks</div>
+                    <div class="content_list_body_intro">this is Socks</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+            <div class="content_list">
+                <img class="content_list_img" src="/images/accessories.jpg" alt="accessories">
+                <div class="content_list_body">
+                    <div class="content_list_body_title">Accessories</div>
+                    <div class="content_list_body_intro">this is accessories</div>
+                </div>
+                <div class="content_list_into"><a href="">check it out</a> </div>
+            </div>
+        </div>
+
+    <!--bottom -->
+        <table class="bottom">
+                <tr>
+                    <th>了解我們</th>
+                    <th>與我們一起獲利</th>
+                    <th>Gibson Shop支付商品</th>
+                    <th>讓我們助你一臂之力</th>
+                </tr>
+                <tr>
+                    <td><a href="">就業機會</a></td>
+                    <td><a href="">在Gibson Shop 上銷售</a></td>
+                    <td><a href="">集點購物專案</a></td>
+                    <td><a href="">Gibon Shop和 武漢肺炎</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">部落格</a></td>
+                    <td><a href="">成為合作夥伴</a></td>
+                    <td><a href="">重新載入我的餘額</a></td>
+                    <td><a href="">您的帳戶</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">關於Gibon Shop</a></td>
+                    <td><a href="">廣告您的產品</a></td>
+                    <td></td>
+                    <td><a href="">您的訂單</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">投資人關係</a> </td>
+                    <td><a href="">我們讓你自助發行</a> </td>
+                    <td></td>
+                    <td><a href="">退貨和換貨</a> </td>
+                </tr>
+        </table>
+        
+    <script src="/javascripts/index.js"></script>
+</body>
+</html>
+
+
+
+
