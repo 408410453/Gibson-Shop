@@ -36,3 +36,22 @@ input.addEventListener("keydown", function(e){
     console.log(val);
   };
 
+
+//number
+var select = document.getElementById('number_select');
+var input_visible = document.getElementById('number_input');
+var numberUpdate = document.getElementById("number_update");
+
+document.getElementById('number_select').onchange = function ()
+ {
+  if(select.value==='10'){
+    select.classList.add("content_list_body_number_delete") ;
+    input_visible.style.setProperty('display', 'initial');
+  }
+}
+
+numberUpdate.addEventListener("click",function(){
+  input_visible.style ="display:none"
+  select.classList.remove("content_list_body_number_delete") ;
+  select[0].selected=true;
+})

@@ -17,7 +17,6 @@ $radius: 0.2rem;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
 }
 body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -32,7 +31,7 @@ body{
     width: 100%;
     box-shadow: 0 0 10px $clr-gray300;
     a{
-        color: black;
+        color:black;
         text-decoration: none;
     }
 
@@ -187,17 +186,64 @@ body{
     position: relative;
     display: grid;
     margin: 30px 60px;
-    grid-auto-rows:390px;
-    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:250px;
+    grid-template-columns:800px ;
     gap: 1rem;
 
+    &_total{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position:absolute;
+        box-shadow: 0 0 10px 5px $clr-gray300;
+        background-color: white;
+        right: 0;
+        width: 26%;
+        padding: 25px 15px;
+        &_money2{
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            &::before{
+                content: "$";
+                font-size: 1rem;
+            }
+            &::after{
+                content: "TWD";
+                font-size: 1rem;
+            }
+        }
+        &_checkout input{
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 0.5rem;
+            width: 15rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $clr-primary-dark;
+            }
+        }
+    }
+
     &_list{       
-        position: relative;
+        display: flex;
+        position: relative;   
         box-shadow: 0 0 10px 5px $clr-gray300;
         background-color: white;
         overflow: hidden;
         transition: 250ms all ease-in-out;
-        cursor: pointer;
+
+        input{
+            position:absolute;
+            right: 0;
+            top: 7rem;
+            width: 1.3rem;
+            height: 1.3rem;
+            margin-right:1.7rem ;
+            cursor: pointer;
+            
+        }
         &_sale{
             font-size: 0.8rem;
             font-weight:bold ;
@@ -211,95 +257,107 @@ body{
             z-index: 1;
             top: 1rem;
         }
-        &_money{
-            width: 5rem;
-            background-color:turquoise;
-            position: absolute;
-            right:0;
-            bottom:8.5rem;
-            color: white;
-            font-weight: bold;
-            font-size: 1rem;
-            padding: 0.6rem;
-            margin: 0.2rem;
-            border-radius:1rem 1rem 1rem 1rem ;
-            z-index: 1;
-            &::before{
-                content: "$";
-            }
-            &::after{
-                content: "TWD";
-                font-size: 0.2rem;
-                width: 1rem;
-            }
-        }
-        
         &_img{
             object-fit: cover;
-            width: 100%;
+            width: 30%;
             height: 16rem;
         }
         &_body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             margin: 0.5rem 1rem; 
+            position: relative;
+            top:0.5rem;
             font-family:Arial, Helvetica, sans-serif;
             &_title{
                 line-height: 1.8rem;
-                margin-bottom: 0.2rem;
+                margin-bottom: 0.8rem;
                 font-size: 1.5rem;
                 font-weight: bold;
             }
             &_intro{
                 line-height: 1.8rem;
-                margin-bottom: 0.2rem;
+                margin-bottom: 0.8rem;
                 font-size: 1.1rem;
                 opacity: 0.5; 
             }   
+            &_money{
+                width: 5rem;
+                background-color:turquoise;
+                color: white;
+                font-weight: bold;
+                font-size: 1rem;
+                padding: 0.6rem;
+                margin-bottom: 0.8rem;
+                border-radius:1rem 1rem 1rem 1rem ;
+                z-index: 1;
+                &::before{
+                    content: "$";
+                }
+                &::after{
+                    content: "TWD";
+                    font-size: 0.2rem;
+                    width: 1rem;
+                }
+            }
+            &_color{
+                line-height: 1.8rem;
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+                opacity: 0.5;
+                &::before{
+                    content: "color:";
+                    font-weight: bold;
+                } 
+            }           
+            &_number select{
+                box-shadow: 0 2px 2px 0 $clr-gray400;
+                border-radius: 0.5rem;
+                width: 4rem;
+                height: 2rem;
+                position: relative;
+                cursor: pointer;
+                &:hover{
+                    background-color: $clr-gray300;
+                }
+            }
+            &_number_delete{
+                display: none;
+            }
+            &_number2 input{
+                box-shadow: 0 2px 2px 0 $clr-gray400;
+                border-radius: 0.5rem;
+                height:2rem ;
+                width: 5rem;
+                position: absolute;
+                left: 2.6rem;
+                top:11rem;
+                display: none;
+            }
+           &_update input{
+                box-shadow: 0 2px 2px 0 $clr-gray400;
+                background-color: $clr-gray400;
+                width: 3rem;
+                height: 1.5rem;
+                position:absolute;
+                left: 7.8rem;
+                top:11.3rem;
+                &:hover{
+                    background-color: $clr-gray500;
+                }
+           }
+           &_delete input{
+                position:absolute;
+                box-shadow: 0 2px 2px 0 $clr-gray400;     
+                background-color: $clr-gray400;
+                width: 3rem;
+                height: 1.5rem;
+                right: -14.5rem;
+                top:11.3rem;
+                &:hover{
+                    background-color: $clr-gray500;
+                }
+           } 
         }
-        &_into a{
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            width: 80%;
-            color: $clr-gray500;
-            border-left-style: none;
-            border-right-style: none;
-            border-bottom-style: none;
-            border-top: 1px solid $clr-gray300;
-            font-size: 1.2rem;
-            font-weight:bold; 
-            padding-top: 0.5rem;
-            margin-top: 0.8rem;
-            text-decoration: none;
-            cursor: pointer;
-            &:hover{
-                color: $clr-primary-dark;
-            }    
-        }    
-        &_into input{
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            width: 80%;
-            color: $clr-gray500;
-            background-color: white;
-            border-left-style: none;
-            border-right-style: none;
-            border-bottom-style: none;
-            border-top: 1px solid $clr-gray300;
-            font-size: 1.2rem;
-            font-weight:bold; 
-            padding-top: 0.5rem;
-            margin-top: 0.8rem;
-            text-decoration: none;
-            cursor: pointer;
-            &:hover{
-                color: $clr-primary-dark;
-            }    
-        }    
+         
         &:hover{
             transform: scale(1.05);
             box-shadow: 0px 2px 40px $clr-gray400;
@@ -333,6 +391,7 @@ body{
 }
 
 /* responsive*/
+
 @media only screen and (max-width: 950px) {
     .nav{
         &_list{
@@ -361,7 +420,11 @@ body{
         }
     }
     .content{
-        grid-template-columns:repeat(3,1fr);
+        &_totalmoney{
+            display: none;
+        }
+        grid-template-columns:500px ;
+        
     }
     .bottom{
         display: none;
@@ -370,6 +433,6 @@ body{
 
 @media only screen and (max-width:700px){
     .content{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns:400px ;
     }
 }
